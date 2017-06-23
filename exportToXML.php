@@ -6,11 +6,11 @@ $time = $_POST['time'];
 $subojectif = $_POST['subojectif'];
 $description = $_POST['description'];
 $check = $_POST['check'];
-
+$index = "../form.php";
 if (isset($check)){
     $check = "true";
 } else {
-    $check = "true";
+    $check = "false";
 }
 
 // Mise en forme XML
@@ -39,23 +39,23 @@ $string =
 ";
 
 echo '<pre>', htmlentities($string), '</pre>';
-$name = '/test/' .$_POST['name']. '.xml';
+$name = 'sortie_xml/' .$_POST['name']. '.xml';
 var_dump($name);
 // Fichier de destination
 $destination = $name;
 // Ouverture du fichier
-$handle = fopen($destination, 'w+');
+$handle = fopen($destination, 'x+');
 // On vérifie si le dossier est écrivable
 if (is_writable($destination)) {
 
     if (fwrite($handle, $string) === false){
         echo " Probleme d'ecriture1";
     }
-   // header('Location: test.xml');
+    header('Location:'.$name);
 } else {
     echo "Probleme d'écriture";
 }
 
+
 ?>
-<a href="test.xml">Resultat XML</a>
-<a href="form.php">Retour au formulaire</a>
+
