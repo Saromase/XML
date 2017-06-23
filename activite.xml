@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE note SYSTEM "note.dtd">
+<root>
+    <programme formation="">
+        <module language="" group="">
+            <Objectif></Objectif>
+            <PreRequis></PreRequis>
+            <Materiel></Materiel>
+            <Sequence evaluation="">
+                <Objectif></Objectif>
+                <Code></Code>
+                    <Activite done="false">
+                        <Objectif></Objectif>
+                        <Code></Code>
+                        <Temps></Temps>
+                        <SousObjectif></SousObjectif>
+                        <Description></Description>
+                    </Activite>
+            </Sequence>
+        </module>
+    </programme>
+</root>
