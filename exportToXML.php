@@ -7,6 +7,8 @@ $subojectif = $_POST['subojectif'];
 $description = $_POST['description'];
 $check = $_POST['check'];
 $index = "../form.php";
+$name = htmlspecialchars($_POST['name']);
+
 if (isset($check)){
     $check = "true";
 } else {
@@ -39,7 +41,7 @@ $string =
 ";
 
 echo '<pre>', htmlentities($string), '</pre>';
-$name = 'sortie_xml/' .$_POST['name']. '.xml';
+$destination = 'sortie_xml/' .$name. '.xml';
 // Ouverture du fichier
 $handle = fopen($destination, 'x+');
 // On vérifie si le dossier est écrivable
@@ -48,7 +50,7 @@ if (is_writable($destination)) {
     if (fwrite($handle, $string) === false){
         echo " Probleme d'ecriture1";
     }
-    header('Location:'.$name);
+    header('Location:'.$destination);
 } else {
     echo "Probleme d'écriture";
 }
