@@ -40,9 +40,6 @@ $string =
 
 echo '<pre>', htmlentities($string), '</pre>';
 $name = 'sortie_xml/' .$_POST['name']. '.xml';
-var_dump($name);
-// Fichier de destination
-$destination = $name;
 // Ouverture du fichier
 $handle = fopen($destination, 'x+');
 // On vérifie si le dossier est écrivable
