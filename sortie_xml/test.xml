@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+    <programme formation=''>
+        <module language='' group=''>
+            <Objectif></Objectif>
+            <PreRequis></PreRequis>
+            <Materiel></Materiel>
+            <Sequence evaluation=''>
+                <Objectif></Objectif>
+                <Code></Code>
+                <Activite done='true'>
+                    <Objectif>j</Objectif>
+                    <Code>j </Code>
+                    <Temps>j</Temps>
+                    <SousObjectif></SousObjectif>
+                    <Description>jj</Description>
+                </Activite>
+            </Sequence>
+        </module>
+    </programme>
+</root>
